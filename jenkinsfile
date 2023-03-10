@@ -1,0 +1,36 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('start') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        stage('clone git repository') {
+            steps {
+                 echo 'https://github.com/OleShangti/gallery-weekrepo6.git'
+            }
+        }
+        stage('Install dependencies') {
+            steps {
+                echo 'npm install'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying..'
+            }
+        }
+        stage('End') {
+            steps {
+                echo 'Build is finished....'
+            }
+        }
+    }
+}
