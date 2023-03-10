@@ -17,7 +17,7 @@ pipeline {
 
         EMAIL_SUBJECT_FAILURE = "Status: 'FAILED' -Job \'${env.JOB_NAME}:${env.BUILD_NUMBER}\'"
 
-        EMAIL_RECEPIENT = 'jshangiti@gmail.com'
+        EMAIL_RECEPIENT = 'gumbe12@gmail.com'
 
     }
    
@@ -36,17 +36,23 @@ pipeline {
         }
         stage('Install dependencies') {
             steps {
-                sh 'npm install'
+                sh '''
+                   npm install
+                   '''
             }
         }
         stage('Run test') {
             steps {
-                sh sh 'npm test'
+                sh '''
+                   npm test
+                   '''
             }
         }
         stage('Deploy to render') {
             steps {
-                sh 'curl -d POST https://api.render.com/deploy/srv-cg5jrlkeoogsv97ov4og?key=9ANeAmDrGWs'  
+                sh '''
+                   curl -d POST https://api.render.com/deploy/srv-cg5jrlkeoogsv97ov4og?key=9ANeAmDrGWs
+                   '''
             }
         }
         stage('End') {
