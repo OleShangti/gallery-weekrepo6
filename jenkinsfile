@@ -11,7 +11,7 @@ pipeline {
         }
         stage('Clone github repository') {
             steps {
-                git url: 'https://github.com/OleShangti/gallery-weekrepo6.git', branch: 'master'
+                git url: 'https://github.com/OleShangti/gallery-weekrepo6', branch: 'master'
             }
         }
         stage('Install dependencies') {

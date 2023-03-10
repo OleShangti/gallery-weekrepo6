@@ -20,6 +20,6 @@ Josephat OleShangiti
 - Incase you have any question or contributions you can reach out to me via email me at jshangiti@gmail.com.
 - I will try and respond as soon as possible. Thank you!
 
-## License <https://github.com/OleShangti/gallery-weekrepo6.git>
+## License <https://github.com/OleShangti/gallery-weekrepo6>
 
 ## Copyright Josephat Ole Shangiti et al. 2023
