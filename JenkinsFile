@@ -36,23 +36,17 @@ pipeline {
         }
         stage('Install dependencies') {
             steps {
-                sh '''
-                   npm install
-                   '''
+                sh 'npm install'
             }
         }
         stage('Run test') {
             steps {
-                sh '''
-                   npm test
-                   '''
+                sh sh 'npm test'
             }
         }
         stage('Deploy to render') {
             steps {
-                sh '''
-                   curl -d POST https://api.render.com/deploy/srv-cg5jrlkeoogsv97ov4og?key=9ANeAmDrGWs
-                   '''
+                sh 'curl -d POST https://api.render.com/deploy/srv-cg5jrlkeoogsv97ov4og?key=9ANeAmDrGWs'  
             }
         }
         stage('End') {
