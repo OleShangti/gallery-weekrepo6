@@ -7,7 +7,7 @@ pipeline {
         
     stage('Git') {
       steps {
-        git 'https://github.com/OleShangti/gallery-weekrepo6', branch: 'master'
+        git 'https://github.com/OleShangti/gallery-weekrepo6'
       }
     }
      
