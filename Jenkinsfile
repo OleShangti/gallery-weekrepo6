@@ -23,14 +23,7 @@ pipeline {
         sh 'node test'
       }
     }
-
-    stage('Deploy to render') {
-      steps {
-        curl -d POST 'https://api.render.com/deploy/srv-cg5jrlkeoogsv97ov4og?key=9ANeAmDrGWs'
-         sh '<<Deploy>>'
-      }
-    } 
-    
+  
     stage('END') {
       steps {
         echo 'Build has run Successfuly'
